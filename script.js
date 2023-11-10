@@ -99,7 +99,7 @@ function verifLettre(lettres) {
 
             if (imgNombre === 8) {
                 resultat.classList.toggle('cache')
-                resultatTitre.innerHTML = `Tu as perdu... Le mot était : <span style="color: aqua;">${mots[motAleatoire].join('')}</span>`
+                resultatTitre.innerHTML = `Tu as perdu... Le mot était : <span style="color: #FCD8D4;">${mots[motAleatoire].join('')}</span>`
             }
         }
     }

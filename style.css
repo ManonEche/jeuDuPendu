@@ -156,6 +156,11 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .resultat.cache {
@@ -165,18 +170,10 @@ button {
 .resultat_titre {
     font-size: 4em;
     color: #FFFFFF;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
     z-index: 100;
 }
 
 .resultat_boutton {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: relative;
     z-index: 100;
     cursor: pointer;
 }
