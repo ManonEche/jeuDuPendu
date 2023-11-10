@@ -1,0 +1,246 @@
+:root {
+    --couleurPrincipale:#FCD8D4;
+    --couleurSombre:#F5C6AA;
+    --couleurClaire:#FDF6F0;
+    --couleurMedium:#F8E2CF;
+    --couleurTexte: #2d2d2e;
+    /* --policeTitre: 'Lobster Two', sans-serif;
+    --policeTexte: 'Poppins', sans-serif; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--couleurTexte);
+    background: var(--couleurPrincipale);
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+p{
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
+form {
+    box-shadow: 0px 0px 16px 6px rgba(45,45,46,0.41);
+    -webkit-box-shadow: 0px 0px 16px 6px rgba(45,45,46,0.41);
+    -moz-box-shadow: 0px 0px 16px 6px rgba(45,45,46,0.41);
+}
+
+input {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+
+}
+
+::placeholder {
+    text-transform: none;
+}
+
+button {
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    background: var(--couleurSombre);
+}
+
+.main_partie {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+#partie-gauche{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45vw;
+    height: 90vh;
+    background: var(--couleurClaire);
+    border-radius: 10px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+#partie-droite{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 45vw;
+    height: 90vh;
+    background: var(--couleurClaire);
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.form {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form input {
+    flex-grow: 1;
+    height: 60px;
+}
+
+.form button {
+    height: 60px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    cursor: pointer;
+}
+
+.alphabet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.lettres {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.lettres:hover {
+    transform: scale(105%);
+}
+
+.voirMot {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 10px;
+    font-size: 5em;
+    color: #000;
+}
+
+.resultat {
+    width: 100vw;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.resultat.cache {
+    display: none;
+}
+
+.resultat_titre {
+    font-size: 4em;
+    color: #FFFFFF;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 100;
+}
+
+.resultat_boutton {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.overlay {
+    background: #000;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    opacity: 90%;
+    z-index: -1;
+}
+
+.debut {
+    width: 100vw;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.debut.cache {
+    display: none;
+}
+
+.debut_titre {
+    font-size: 4em;
+    color: #FFFFFF;
+
+    z-index: 100;
+}
+
+.debut_p {
+    text-align: center;
+    z-index: 100;
+    color: var(--couleurClaire);
+}
+
+.debut_boutton {
+    z-index: 100;
+    cursor: pointer;
+}
+
+.debut_boutton:hover {
+    transform: scale(105%);
+}
+
+.debut_overlay {
+    background: #000;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    opacity: 90%;
+    z-index: -1;
+}
